@@ -20,7 +20,7 @@
       <li><a href="#beans">Coffee Beans</a></li>
       <li><a href="#brewing">Brewing Methods</a></li>
       <li><a href="#brewing-flavour">Brewing Method Flavours</a></li>
-      <li><a href="types">Brewing Types</a></li>
+      <li><a href="#types">Brewing Types</a></li>
     </ul>
 
     <form id="survey-form">
@@ -69,10 +69,19 @@
           <option value="">Select Your Milk</option>
           <option value="no-milk">No Milk</option>
           <option value="cow-milk">Cow Milk</option>
+          <option value="goat-milk">Goat Milk</option>
           <option value="soy-milk">Soy Milk</option>
           <option value="oat-milk">Oat Milk</option>
+          <option value="rice-milk">Rice Milk</option>
           <option value="almond-milk">Almond Milk</option>
+          <option value="cashew-milk">Cashew Milk</option>
+          <option value="macadamia-milk">Macadamia Milk</option>
+          <option value="peanut-milk">Peanut Milk</option>
+          <option value="hazelnut-milk">Hazelnut Milk</option>
           <option value="coconut-milk">Coconut Milk</option>
+          <option value="lactose-free-milk">Lactose Free Milk</option>
+          <option value="surprise-milk">Surprise Me</option>
+          <option value="no-preference-milk">No Preference</option>
         </select>
         <p>Strength</p>
         <input type="radio" name="strength" id="sweet" value="sweet" />
@@ -159,20 +168,16 @@
         <label for="no-preference">No Preference</label>
       </fieldset>
       <fieldset>
-        <p>
-          Special Requests:<br />
-          (Note: You will be charged for any extras)
-        </p>
-        <p>
-          <textarea
-            id="comments"
-            rows="10"
-            cols="30"
-            placeholder="Any Notes... Example: No Sugar, Extra Hot, etc."
-          ></textarea>
-          <br /><br />
-          <button type="submit" id="submit">Submit Order</button>
-        </p>
+        <legend>Special Requests:</legend>
+        <p>(Note: You will be charged for any extras)</p>
+        <textarea
+          id="comments"
+          rows="10"
+          cols="30"
+          placeholder="Any Notes... Example: No Sugar, Extra Hot, etc."
+        ></textarea>
+        <br /><br />
+        <button type="submit" id="submit">Submit Order</button>
       </fieldset>
     </form>
     <h2>The Ultimate Guide To Coffee: From Beans to Brews</h2>
