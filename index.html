@@ -7,367 +7,392 @@
   </head>
 
   <body>
-    <h1 id="title">Brew The Perfect Cup</h1>
-    <p id="description">
-      Fill out the form below to create your perfect cup of coffee. We'll brew
-      it just the way you like it — strong, sweet, or somewhere in between!
-      <br />Not familiar with coffee and their different flavours? Scroll to the
-      bottom to see a guide on the different types of coffee and their flavours,
-      carefully curated by our top baristas!
-    </p>
-    <h2>Jump To Section</h2>
-    <ul>
-      <li><a href="#beans">Coffee Beans</a></li>
-      <li><a href="#brewing">Brewing Methods</a></li>
-      <li><a href="#brewing-flavour">Brewing Method Flavours</a></li>
-      <li><a href="#types">Brewing Types</a></li>
-    </ul>
-
-    <form id="survey-form">
-      <fieldset>
-        <legend>Personal Information</legend>
-        <label for="name-label">Your Name (required):</label>
-        <input
-          type="text"
-          id="name-label"
-          placeholder="Ex. John Doe"
-          required
-        />
-        <label for="email-label">E-mail (required):</label>
-        <input
-          type="email"
-          id="email-label"
-          placeholder="example@email.com"
-          required
-        />
-        <label for="number-label">Tel (required):</label>
-        <input
-          type="number"
-          id="number-label"
-          placeholder="Ex. 1234567890"
-          required
-        />
-        <label for="age">Age (optional):</label>
-        <input type="number" id="age" min="3" max="100" />
-      </fieldset>
-      <fieldset>
-        <legend>Choose Your Coffee and Extras</legend>
-        <select id="dropdown-coffee" required>
-          <option value="">Select Your Coffee</option>
-          <option value="espresso">Espresso</option>
-          <option value="latte">Latte</option>
-          <option value="cappuccino">Cappuccino</option>
-          <option value="americano">Americano</option>
-          <option value="mocha">Mocha</option>
-          <option value="flat-white">Flat White</option>
-          <option value="machiatto">Machiatto</option>
-          <option value="cold-brew">Cold Brew</option>
-          <option value="affogato">Affogato</option>
-          <option value="ice-coffee">Iced Coffee</option></select
-        ><br /><br />
-        <select id="dropdown-milk" required>
-          <option value="">Select Your Milk</option>
-          <option value="no-milk">No Milk</option>
-          <option value="cow-milk">Cow Milk</option>
-          <option value="goat-milk">Goat Milk</option>
-          <option value="soy-milk">Soy Milk</option>
-          <option value="oat-milk">Oat Milk</option>
-          <option value="rice-milk">Rice Milk</option>
-          <option value="almond-milk">Almond Milk</option>
-          <option value="cashew-milk">Cashew Milk</option>
-          <option value="macadamia-milk">Macadamia Milk</option>
-          <option value="peanut-milk">Peanut Milk</option>
-          <option value="hazelnut-milk">Hazelnut Milk</option>
-          <option value="coconut-milk">Coconut Milk</option>
-          <option value="lactose-free-milk">Lactose Free Milk</option>
-          <option value="surprise-milk">Surprise Me</option>
-          <option value="no-preference-milk">No Preference</option>
-        </select>
-        <p>Strength</p>
-        <input type="radio" name="strength" id="sweet" value="sweet" />
-        <label for="sweet">Sweet</label>
-        <input type="radio" name="strength" id="mild" value="mild" />
-        <label for="mild">Mild</label>
-        <input type="radio" name="strength" id="strong" value="strong" />
-        <label for="strong">Strong</label>
-        <p>Extras:</p>
-        <input type="checkbox" id="cream" value="cream" />
-        <label for="cream">Whipped Cream</label><br />
-        <input type="checkbox" id="ice" value="ice" />
-        <label for="ice">Ice</label><br />
-        <input type="checkbox" id="cinnamon-powder" value="cinnamon" />
-        <label for="cinnamon-powder">Cinnamon Powder</label><br />
-        <input type="checkbox" id="chocolate-powder" value="chocolate-powder" />
-        <label for="chocolate-powder">Chocolate Powder</label><br />
-        <input type="checkbox" id="nutmeg-powder" value="nutmeg-powder" />
-        <label for="nutmeg-powder">Nutmeg Powder</label><br />
-        <input type="checkbox" id="vanilla-syrup" value="vanilla syrup" />
-        <label for="vanilla-syrup">Vanilla Syrup</label><br />
-        <input type="checkbox" id="caramel-syrup" value="caramel syrup" />
-        <label for="caramel-syrup">Caramel Syrup</label><br />
-        <input type="checkbox" id="chocolate-syrup" value="chocolate syrup" />
-        <label for="chocolate-syrup">Chocolate Syrup</label><br />
-        <input type="checkbox" id="hazelnut-syrup" value="hazelnut syrup" />
-        <label for="hazelnut-syrup">Hazelnut Syrup</label><br />
-        <input type="checkbox" id="biscoff-syrup" value="biscoff-syrup" />
-        <label for="biscoff-syrup">Biscoff Syrup</label><br />
-        <input type="checkbox" id="peppermint-syrup" value="peppermint syrup" />
-        <label for="peppermint-syrup">Peppermint Syrup</label><br />
-        <input
-          type="checkbox"
-          id="pumpkin-spice-syrup"
-          value="pumpkin-spice-syrup"
-        />
-        <label for="pumpkin-spice-syrup">Pumpkin Spice Syrup</label><br />
-        <input type="checkbox" id="honey" value="honey" />
-        <label for="honey">Honey</label><br />
-        <p>
-          Don't see what you're looking for? Let us know in the box below.<br />
-          We'll add it if available, or look into adding it in the future.
-        </p>
-        <textarea
-          id="extra-request"
-          rows="4"
-          cols="30"
-          placeholder="Any other extras you would like to have on your drink, or our future 'extras' menu?"
-        ></textarea>
-      </fieldset>
-      <fieldset>
-        <legend>Brewing Preferences</legend>
-        <select id="coffee-beans">
-          <option value="select-your-beans">Select Your Beans</option>
-          <option value="arabica">Arabica</option>
-          <option value="robusta">Robusta</option>
-          <option value="Liberica">Liberica</option>
-          <option value="surprise">Surprise Me</option>
-          <option value="no-preference">No Preference</option>
-        </select>
-      </fieldset>
-      <fieldset>
-        <legend>Brew Method</legend>
-        <p>Select Your Brewing Method:</p>
-        <input type="radio" id="drip" name="brew" value="drip" />
-        <label for="drip">Drip</label>
-        <input
-          type="radio"
-          id="french-press"
-          name="brew"
-          value="french-press"
-        />
-        <label for="french-press">French Press</label>
-        <input type="radio" id="aero-press" name="brew" value="aero-press" />
-        <label for="aero-press">Aero Press</label>
-        <input type="radio" id="surprise-me" name="brew" value="surprise-me" />
-        <label for="surprise-me">Surprise Me</label>
-        <input
-          type="radio"
-          id="no-preference"
-          name="brew"
-          value="no-preference"
-        />
-        <label for="no-preference">No Preference</label>
-      </fieldset>
-      <fieldset>
-        <legend>Special Requests:</legend>
-        <p>(Note: You will be charged for any extras)</p>
-        <textarea
-          id="comments"
-          rows="10"
-          cols="30"
-          placeholder="Any Notes... Example: No Sugar, Extra Hot, etc."
-        ></textarea>
-        <br /><br />
-        <button type="submit" id="submit">Submit Order</button>
-      </fieldset>
-    </form>
-    <h2>The Ultimate Guide To Coffee: From Beans to Brews</h2>
-    <p>
-      Need help picking which coffee you would like to order?<br />
-      Or understanding what different brew types and coffee beans are, and how
-      they affect the flavour of your drink.<br />
-      Our team of baristas have all chipped in to give you this guide, happy
-      brewing!
-    </p>
-    <h3 id="beans">Coffee Beans</h3>
-    <table>
-      <caption>
-        <strong> Coffee Beans</strong>
-      </caption>
-      <thead>
-        <tr>
-          <th>Bean Type</th>
-          <th>Flavour Profile</th>
-          <th>Caffeine Level</th>
-          <th>Bean Shape</th>
-          <th>Growing Region</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Arabica</td>
-          <td>Smooth, slightly sweet, fruity</td>
-          <td>Medium</td>
-          <td>Oval, curved crease</td>
-          <td>Ethiopia, Latin America</td>
-        </tr>
-        <tr>
-          <td>Robusta</td>
-          <td>Strong, bitter, earthy</td>
-          <td>High</td>
-          <td>Round, straight crease</td>
-          <td>Africa, Vietnam, Indonesia</td>
-        </tr>
-        <tr>
-          <td>Liberica</td>
-          <td>Smoky, floral, woody</td>
-          <td>Medium-Low</td>
-          <td>Large, asymmetrical shape</td>
-          <td>Phillipines, Malaysia, West Africa</td>
-        </tr>
-      </tbody>
-    </table>
-    <h3 id="brewing">Brewing Methods</h3>
-    <table>
-      <caption>
-        <strong> Brewing Methods</strong>
-      </caption>
-      <thead>
-        <tr>
-          <td>Method</td>
-          <td>Description</td>
-          <td>Flavour</td>
-          <td>Grind Size</td>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Drip</td>
-          <td>Hot water slowly drips through grounds in a paper filter</td>
-          <td>Clean, smooth</td>
-          <td>Medium</td>
-        </tr>
-        <tr>
-          <td>French Press</td>
-          <td>
-            Grounds steep in hot water, then filtered with a metal plunger
-          </td>
-          <td>Bold, rich, full-bodied</td>
-          <td>Coarse</td>
-        </tr>
-        <tr>
-          <td>AeroPress</td>
-          <td>Coffee is steeped then pushed through a filter using pressure</td>
-          <td>Smooth, strong, low acid</td>
-          <td>Fine to Medium-Fine</td>
-        </tr>
-      </tbody>
-    </table>
-    <h3 id="brewing-flavour">Brewing Method Flavour</h3>
-    <table>
-      <caption>
-        <strong> Brewing Method Flavour</strong>
-      </caption>
-      <thead>
-        <tr>
-          <td>Method</td>
-          <td>How it affects flavour</td>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Drip</td>
-          <td>
-            Produces a clean and smooth cup with balanced strength. The paper
-            filter removes most oils, giving a lighter body.
-          </td>
-        </tr>
-        <tr>
-          <td>French Press</td>
-          <td>
-            Results in a full-bodied, bold flavor. The metal filter lets more
-            natural oils and fine particles into the cup, enhancing richness.
-          </td>
-        </tr>
-        <tr>
-          <td>AeroPress</td>
-          <td>
-            Creates a smooth, rich coffee with low acidity. It combines pressure
-            and immersion, making a cup similar to espresso but cleaner.
-          </td>
-        </tr>
-      </tbody>
-    </table>
-    <h3 id="types">Types of Coffee</h3>
-    <p>
-      This guide has gone through the true fundamentals of coffee, and how it
-      affects the flavour of your soon to-be coffee. Now just like
-      <abbr title="Hyper Text Markup Language">HTML</abbr>, that was the
-      skeleton structure, now all we need is to apply some
-      <abbr title="Cascading Style Sheets">CSS</abbr>, and design our coffee.
-      Here are the several different types of coffees we offer, and their
-      details.
-    </p>
-    <h4>Latte</h4>
-    <p>
-      A latte is made with one shot of espresso and steamed milk, topped with a
-      small amount of milk foam. It’s smooth, creamy, and perfect for those who
-      prefer a milder coffee taste.
-    </p>
-    <h4>Cappuccino</h4>
-    <p>
-      Cappuccino has equal parts espresso, steamed milk, and milk foam. It’s
-      stronger than a latte, with a thick, airy foam layer on top.
-    </p>
-    <h4>Americano</h4>
-    <p>
-      An Americano is made by adding hot water to a shot of espresso. It has a
-      similar strength to drip coffee but with the rich flavor of espresso.
-    </p>
-    <h4>Espresso</h4>
-    <p>
-      A concentrated shot of coffee made by forcing hot water through
-      finely-ground beans. It’s strong, bold, and the base for most other coffee
-      drinks.
-    </p>
-    <h4>Machiatto</h4>
-    <p>
-      This drink means “stained” in Italian. It’s a shot of espresso “stained”
-      with a small amount of milk or milk foam — stronger than a latte or
-      cappuccino.
-    </p>
-    <h4>Flat White</h4>
-    <p>
-      Originating from Australia/New Zealand, a flat white is similar to a latte
-      but smaller, with a thinner layer of microfoam and a stronger espresso
-      taste.
-    </p>
-    <h4>Mocha</h4>
-    <p>
-      A mocha blends espresso, steamed milk, and chocolate syrup or cocoa powder
-      — like a hot chocolate with a caffeine kick.
-    </p>
-    <h4>Cold Brew</h4>
-    <p>
-      Coffee grounds are steeped in cold water for 12 to 24 hours. The result is
-      a smooth, slightly sweet coffee with low acidity — perfect served over
-      ice.
-    </p>
-    <h4>Affogato</h4>
-    <p>
-      A scoop of vanilla ice cream “drowned” in a hot shot of espresso. It’s
-      part dessert, part coffee — and fully delicious.
-    </p>
-    <h4>Iced Coffee</h4>
-    <p>
-      Brewed hot, then cooled and served over ice. Tastes more like traditional
-      drip coffee, but refreshing and chilled.
-    </p>
+    <header>
+      <h1 id="title">Brew The Perfect Cup</h1>
+      <p id="description">
+        Fill out the form below to create your perfect cup of coffee. We'll brew
+        it just the way you like it — strong, sweet, or somewhere in between!
+        <br />Not familiar with coffee and their different flavours? Scroll to
+        the bottom to see a guide on the different types of coffee and their
+        flavours, carefully curated by our top baristas!
+      </p>
+    </header>
+    <nav>
+      <h2>Jump To Section</h2>
+      <ul>
+        <li><a href="#beans">Coffee Beans</a></li>
+        <li><a href="#brewing">Brewing Methods</a></li>
+        <li><a href="#brewing-flavour">Brewing Method Flavours</a></li>
+        <li><a href="#types">Brewing Types</a></li>
+      </ul>
+    </nav>
+    <main>
+      <form id="survey-form">
+        <fieldset>
+          <legend>Personal Information</legend>
+          <label for="name-label">Your Name (required):</label>
+          <input
+            type="text"
+            id="name-label"
+            placeholder="Ex. John Doe"
+            required
+          />
+          <label for="email-label">E-mail (required):</label>
+          <input
+            type="email"
+            id="email-label"
+            placeholder="example@email.com"
+            required
+          />
+          <label for="number-label">Tel (required):</label>
+          <input
+            type="number"
+            id="number-label"
+            placeholder="Ex. 1234567890"
+            required
+          />
+          <label for="age">Age (optional):</label>
+          <input type="number" id="age" min="3" max="100" />
+        </fieldset>
+        <fieldset>
+          <legend>Choose Your Coffee and Extras</legend>
+          <select id="dropdown-coffee" required>
+            <option value="">Select Your Coffee</option>
+            <option value="espresso">Espresso</option>
+            <option value="latte">Latte</option>
+            <option value="cappuccino">Cappuccino</option>
+            <option value="americano">Americano</option>
+            <option value="mocha">Mocha</option>
+            <option value="flat-white">Flat White</option>
+            <option value="machiatto">Machiatto</option>
+            <option value="cold-brew">Cold Brew</option>
+            <option value="affogato">Affogato</option>
+            <option value="ice-coffee">Iced Coffee</option></select
+          ><br /><br />
+          <select id="dropdown-milk" required>
+            <option value="">Select Your Milk</option>
+            <option value="no-milk">No Milk</option>
+            <option value="cow-milk">Cow Milk</option>
+            <option value="goat-milk">Goat Milk</option>
+            <option value="soy-milk">Soy Milk</option>
+            <option value="oat-milk">Oat Milk</option>
+            <option value="rice-milk">Rice Milk</option>
+            <option value="almond-milk">Almond Milk</option>
+            <option value="cashew-milk">Cashew Milk</option>
+            <option value="macadamia-milk">Macadamia Milk</option>
+            <option value="peanut-milk">Peanut Milk</option>
+            <option value="hazelnut-milk">Hazelnut Milk</option>
+            <option value="coconut-milk">Coconut Milk</option>
+            <option value="lactose-free-milk">Lactose Free Milk</option>
+            <option value="surprise-milk">Surprise Me</option>
+            <option value="no-preference-milk">No Preference</option>
+          </select>
+          <p>Strength</p>
+          <input type="radio" name="strength" id="sweet" value="sweet" />
+          <label for="sweet">Sweet</label>
+          <input type="radio" name="strength" id="mild" value="mild" />
+          <label for="mild">Mild</label>
+          <input type="radio" name="strength" id="strong" value="strong" />
+          <label for="strong">Strong</label>
+          <p>Extras:</p>
+          <input type="checkbox" id="cream" value="cream" />
+          <label for="cream">Whipped Cream</label><br />
+          <input type="checkbox" id="ice" value="ice" />
+          <label for="ice">Ice</label><br />
+          <input type="checkbox" id="cinnamon-powder" value="cinnamon" />
+          <label for="cinnamon-powder">Cinnamon Powder</label><br />
+          <input
+            type="checkbox"
+            id="chocolate-powder"
+            value="chocolate-powder"
+          />
+          <label for="chocolate-powder">Chocolate Powder</label><br />
+          <input type="checkbox" id="nutmeg-powder" value="nutmeg-powder" />
+          <label for="nutmeg-powder">Nutmeg Powder</label><br />
+          <input type="checkbox" id="vanilla-syrup" value="vanilla syrup" />
+          <label for="vanilla-syrup">Vanilla Syrup</label><br />
+          <input type="checkbox" id="caramel-syrup" value="caramel syrup" />
+          <label for="caramel-syrup">Caramel Syrup</label><br />
+          <input type="checkbox" id="chocolate-syrup" value="chocolate syrup" />
+          <label for="chocolate-syrup">Chocolate Syrup</label><br />
+          <input type="checkbox" id="hazelnut-syrup" value="hazelnut syrup" />
+          <label for="hazelnut-syrup">Hazelnut Syrup</label><br />
+          <input type="checkbox" id="biscoff-syrup" value="biscoff-syrup" />
+          <label for="biscoff-syrup">Biscoff Syrup</label><br />
+          <input
+            type="checkbox"
+            id="peppermint-syrup"
+            value="peppermint syrup"
+          />
+          <label for="peppermint-syrup">Peppermint Syrup</label><br />
+          <input
+            type="checkbox"
+            id="pumpkin-spice-syrup"
+            value="pumpkin-spice-syrup"
+          />
+          <label for="pumpkin-spice-syrup">Pumpkin Spice Syrup</label><br />
+          <input type="checkbox" id="honey" value="honey" />
+          <label for="honey">Honey</label><br />
+          <p>
+            Don't see what you're looking for? Let us know in the box below.<br />
+            We'll add it if available, or look into adding it in the future.
+          </p>
+          <textarea
+            id="extra-request"
+            rows="4"
+            cols="30"
+            placeholder="Any other extras you would like to have on your drink, or our future 'extras' menu?"
+          ></textarea>
+        </fieldset>
+        <fieldset>
+          <legend>Brewing Preferences</legend>
+          <select id="coffee-beans">
+            <option value="select-your-beans">Select Your Beans</option>
+            <option value="arabica">Arabica</option>
+            <option value="robusta">Robusta</option>
+            <option value="Liberica">Liberica</option>
+            <option value="surprise">Surprise Me</option>
+            <option value="no-preference">No Preference</option>
+          </select>
+        </fieldset>
+        <fieldset>
+          <legend>Brew Method</legend>
+          <p>Select Your Brewing Method:</p>
+          <input type="radio" id="drip" name="brew" value="drip" />
+          <label for="drip">Drip</label>
+          <input
+            type="radio"
+            id="french-press"
+            name="brew"
+            value="french-press"
+          />
+          <label for="french-press">French Press</label>
+          <input type="radio" id="aero-press" name="brew" value="aero-press" />
+          <label for="aero-press">Aero Press</label>
+          <input
+            type="radio"
+            id="surprise-me"
+            name="brew"
+            value="surprise-me"
+          />
+          <label for="surprise-me">Surprise Me</label>
+          <input
+            type="radio"
+            id="no-preference"
+            name="brew"
+            value="no-preference"
+          />
+          <label for="no-preference">No Preference</label>
+        </fieldset>
+        <fieldset>
+          <legend>Special Requests:</legend>
+          <p>(Note: You will be charged for any extras)</p>
+          <textarea
+            id="comments"
+            rows="10"
+            cols="30"
+            placeholder="Any Notes... Example: No Sugar, Extra Hot, etc."
+          ></textarea>
+          <br /><br />
+          <button type="submit" id="submit">Submit Order</button>
+        </fieldset>
+      </form>
+    </main>
+    <article>
+      <h2>The Ultimate Guide To Coffee: From Beans to Brews</h2>
+      <p>
+        Need help picking which coffee you would like to order?<br />
+        Or understanding what different brew types and coffee beans are, and how
+        they affect the flavour of your drink.<br />
+        Our team of baristas have all chipped in to give you this guide, happy
+        brewing!
+      </p>
+      <h3 id="beans">Coffee Beans</h3>
+      <table>
+        <caption>
+          <strong> Coffee Beans</strong>
+        </caption>
+        <thead>
+          <tr>
+            <th>Bean Type</th>
+            <th>Flavour Profile</th>
+            <th>Caffeine Level</th>
+            <th>Bean Shape</th>
+            <th>Growing Region</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Arabica</td>
+            <td>Smooth, slightly sweet, fruity</td>
+            <td>Medium</td>
+            <td>Oval, curved crease</td>
+            <td>Ethiopia, Latin America</td>
+          </tr>
+          <tr>
+            <td>Robusta</td>
+            <td>Strong, bitter, earthy</td>
+            <td>High</td>
+            <td>Round, straight crease</td>
+            <td>Africa, Vietnam, Indonesia</td>
+          </tr>
+          <tr>
+            <td>Liberica</td>
+            <td>Smoky, floral, woody</td>
+            <td>Medium-Low</td>
+            <td>Large, asymmetrical shape</td>
+            <td>Phillipines, Malaysia, West Africa</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3 id="brewing">Brewing Methods</h3>
+      <table>
+        <caption>
+          <strong> Brewing Methods</strong>
+        </caption>
+        <thead>
+          <tr>
+            <td>Method</td>
+            <td>Description</td>
+            <td>Flavour</td>
+            <td>Grind Size</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Drip</td>
+            <td>Hot water slowly drips through grounds in a paper filter</td>
+            <td>Clean, smooth</td>
+            <td>Medium</td>
+          </tr>
+          <tr>
+            <td>French Press</td>
+            <td>
+              Grounds steep in hot water, then filtered with a metal plunger
+            </td>
+            <td>Bold, rich, full-bodied</td>
+            <td>Coarse</td>
+          </tr>
+          <tr>
+            <td>AeroPress</td>
+            <td>
+              Coffee is steeped then pushed through a filter using pressure
+            </td>
+            <td>Smooth, strong, low acid</td>
+            <td>Fine to Medium-Fine</td>
+          </tr>
+        </tbody>
+      </table>
+      <h3 id="brewing-flavour">Brewing Method Flavour</h3>
+      <table>
+        <caption>
+          <strong> Brewing Method Flavour</strong>
+        </caption>
+        <thead>
+          <tr>
+            <td>Method</td>
+            <td>How it affects flavour</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Drip</td>
+            <td>
+              Produces a clean and smooth cup with balanced strength. The paper
+              filter removes most oils, giving a lighter body.
+            </td>
+          </tr>
+          <tr>
+            <td>French Press</td>
+            <td>
+              Results in a full-bodied, bold flavor. The metal filter lets more
+              natural oils and fine particles into the cup, enhancing richness.
+            </td>
+          </tr>
+          <tr>
+            <td>AeroPress</td>
+            <td>
+              Creates a smooth, rich coffee with low acidity. It combines
+              pressure and immersion, making a cup similar to espresso but
+              cleaner.
+            </td>
+          </tr>
+        </tbody>
+      </table>
+      <h3 id="types">Types of Coffee</h3>
+      <p>
+        This guide has gone through the true fundamentals of coffee, and how it
+        affects the flavour of your soon to-be coffee. Now just like
+        <abbr title="Hyper Text Markup Language">HTML</abbr>, that was the
+        skeleton structure, now all we need is to apply some
+        <abbr title="Cascading Style Sheets">CSS</abbr>, and design our coffee.
+        Here are the several different types of coffees we offer, and their
+        details.
+      </p>
+      <h4>Latte</h4>
+      <p>
+        A latte is made with one shot of espresso and steamed milk, topped with
+        a small amount of milk foam. It’s smooth, creamy, and perfect for those
+        who prefer a milder coffee taste.
+      </p>
+      <h4>Cappuccino</h4>
+      <p>
+        Cappuccino has equal parts espresso, steamed milk, and milk foam. It’s
+        stronger than a latte, with a thick, airy foam layer on top.
+      </p>
+      <h4>Americano</h4>
+      <p>
+        An Americano is made by adding hot water to a shot of espresso. It has a
+        similar strength to drip coffee but with the rich flavor of espresso.
+      </p>
+      <h4>Espresso</h4>
+      <p>
+        A concentrated shot of coffee made by forcing hot water through
+        finely-ground beans. It’s strong, bold, and the base for most other
+        coffee drinks.
+      </p>
+      <h4>Machiatto</h4>
+      <p>
+        This drink means “stained” in Italian. It’s a shot of espresso “stained”
+        with a small amount of milk or milk foam — stronger than a latte or
+        cappuccino.
+      </p>
+      <h4>Flat White</h4>
+      <p>
+        Originating from Australia/New Zealand, a flat white is similar to a
+        latte but smaller, with a thinner layer of microfoam and a stronger
+        espresso taste.
+      </p>
+      <h4>Mocha</h4>
+      <p>
+        A mocha blends espresso, steamed milk, and chocolate syrup or cocoa
+        powder — like a hot chocolate with a caffeine kick.
+      </p>
+      <h4>Cold Brew</h4>
+      <p>
+        Coffee grounds are steeped in cold water for 12 to 24 hours. The result
+        is a smooth, slightly sweet coffee with low acidity — perfect served
+        over ice.
+      </p>
+      <h4>Affogato</h4>
+      <p>
+        A scoop of vanilla ice cream “drowned” in a hot shot of espresso. It’s
+        part dessert, part coffee — and fully delicious.
+      </p>
+      <h4>Iced Coffee</h4>
+      <p>
+        Brewed hot, then cooled and served over ice. Tastes more like
+        traditional drip coffee, but refreshing and chilled.
+      </p>
+    </article>
     <br />
-    <p>
-      We hope this has helped in making your decision, and recieving the best
-      coffee, just the way you like it.<br />
-      We'll also do our best to brew your coffee, with the quality you deserve,
-      happy drinking everybody!
-    </p>
+    <footer>
+      <p>
+        We hope this has helped in making your decision, and recieving the best
+        coffee, just the way you like it.<br />
+        We'll also do our best to brew your coffee, with the quality you
+        deserve, happy drinking everybody!
+      </p>
+    </footer>
   </body>
 </html>
