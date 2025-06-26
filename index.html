@@ -1,12 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=LXGW+Marker+Gothic&display=swap" rel="stylesheet">
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Survey Form</title>
+    <title>Aya Brewin' Beans</title>
   </head>
 
   <body>
+    <div id="color-background">
     <header>
       <h1 id="title">Brew The Perfect Cup</h1>
       <p id="description">
@@ -17,45 +20,47 @@
         flavours, carefully curated by our top baristas!
       </p>
     </header>
-    <nav>
+    <nav class="nav">
       <h2>Jump To Section</h2>
-      <ul>
-        <li><a href="#beans">Coffee Beans</a></li>
-        <li><a href="#brewing">Brewing Methods</a></li>
-        <li><a href="#brewing-flavour">Brewing Method Flavours</a></li>
-        <li><a href="#types">Brewing Types</a></li>
-      </ul>
+        <p class="p-nav"><a href="#beans">Coffee Beans</a></p>
+        <p class="p-nav"><a href="#brewing">Brewing Methods</a></p>
+        <p class="p-nav"><a href="#brewing-flavour">Brewing Method Flavours</a></p>
+        <p class="p-nav"><a href="#types">Brewing Types</a></p>
     </nav>
+
     <main>
       <form id="survey-form">
-        <fieldset>
-          <legend>Personal Information</legend>
-          <label for="name-label">Your Name (required):</label>
+        <fieldset class="fieldset">
+          <legend id="personal-info">Personal Information</legend>
+          <label for="name-label" id="name-label">Your Name (required):</label>
           <input
             type="text"
             id="name-label"
             placeholder="Ex. John Doe"
             required
           />
-          <label for="email-label">E-mail (required):</label>
+          <br><br>
+          <label for="email-label" id="email-label">E-mail (required):</label>
           <input
             type="email"
             id="email-label"
             placeholder="example@email.com"
             required
           />
-          <label for="number-label">Tel (required):</label>
+          <br><br>
+          <label for="number-label" id="number-label">Tel (required):</label>
           <input
             type="number"
             id="number-label"
             placeholder="Ex. 1234567890"
             required
           />
-          <label for="age">Age (optional):</label>
+          <br><br>
+          <label for="age" id="age">Age (optional):</label>
           <input type="number" id="age" min="3" max="100" />
         </fieldset>
         <fieldset>
-          <legend>Choose Your Coffee and Extras</legend>
+          <legend id="choose-coffee">Choose Your Coffee and Extras</legend>
           <select id="dropdown-coffee" required>
             <option value="">Select Your Coffee</option>
             <option value="espresso">Espresso</option>
@@ -87,14 +92,14 @@
             <option value="surprise-milk">Surprise Me</option>
             <option value="no-preference-milk">No Preference</option>
           </select>
-          <p>Strength</p>
+          <p id="strength">Strength</p>
           <input type="radio" name="strength" id="sweet" value="sweet" />
           <label for="sweet">Sweet</label>
           <input type="radio" name="strength" id="mild" value="mild" />
           <label for="mild">Mild</label>
           <input type="radio" name="strength" id="strong" value="strong" />
           <label for="strong">Strong</label>
-          <p>Extras:</p>
+          <p id="extras">Extras:</p>
           <input type="checkbox" id="cream" value="cream" />
           <label for="cream">Whipped Cream</label><br />
           <input type="checkbox" id="ice" value="ice" />
@@ -133,7 +138,7 @@
           <label for="pumpkin-spice-syrup">Pumpkin Spice Syrup</label><br />
           <input type="checkbox" id="honey" value="honey" />
           <label for="honey">Honey</label><br />
-          <p>
+          <p id="extra-request">
             Don't see what you're looking for? Let us know in the box below.<br />
             We'll add it if available, or look into adding it in the future.
           </p>
@@ -145,7 +150,7 @@
           ></textarea>
         </fieldset>
         <fieldset>
-          <legend>Brewing Preferences</legend>
+          <legend id="brew-pref">Brewing Preferences</legend>
           <select id="coffee-beans">
             <option value="select-your-beans">Select Your Beans</option>
             <option value="arabica">Arabica</option>
@@ -156,8 +161,8 @@
           </select>
         </fieldset>
         <fieldset>
-          <legend>Brew Method</legend>
-          <p>Select Your Brewing Method:</p>
+          <legend id="brew-method">Brew Method</legend>
+          <p id="select-brew-method">Select Your Brewing Method:</p>
           <input type="radio" id="drip" name="brew" value="drip" />
           <label for="drip">Drip</label>
           <input
@@ -185,8 +190,8 @@
           <label for="no-preference">No Preference</label>
         </fieldset>
         <fieldset>
-          <legend>Special Requests:</legend>
-          <p>(Note: You will be charged for any extras)</p>
+          <legend id="special-req">Special Requests:</legend>
+          <p id="note">(Note: You will be charged for any extras)</p>
           <textarea
             id="comments"
             rows="10"
@@ -198,15 +203,19 @@
         </fieldset>
       </form>
     </main>
+    </div>
+    <div class="box">
     <article>
-      <h2>The Ultimate Guide To Coffee: From Beans to Brews</h2>
-      <p>
-        Need help picking which coffee you would like to order?<br />
+      
+      <h2 id="coffee-guide">The Ultimate Guide To Coffee: From Beans to Brews</h2>
+      <p id="coffee-guide-p">
+        Need help picking which coffee you would like to order?
         Or understanding what different brew types and coffee beans are, and how
-        they affect the flavour of your drink.<br />
+        they affect the flavour of your drink.
         Our team of baristas have all chipped in to give you this guide, happy
         brewing!
       </p>
+      
       <h3 id="beans">Coffee Beans</h3>
       <table>
         <caption>
@@ -252,10 +261,10 @@
         </caption>
         <thead>
           <tr>
-            <td>Method</td>
-            <td>Description</td>
-            <td>Flavour</td>
-            <td>Grind Size</td>
+            <th>Method</th>
+            <th>Description</th>
+            <th>Flavour</th>
+            <th>Grind Size</th>
           </tr>
         </thead>
         <tbody>
@@ -279,19 +288,19 @@
               Coffee is steeped then pushed through a filter using pressure
             </td>
             <td>Smooth, strong, low acid</td>
-            <td>Fine to Medium-Fine</td>
+            <td>Fine to Medium-Fine</td><h1>
           </tr>
         </tbody>
       </table>
-      <h3 id="brewing-flavour">Brewing Method Flavour</h3>
+      <h3 id="brewing-flavor">Brewing Method Flavour</h3>
       <table>
         <caption>
           <strong> Brewing Method Flavour</strong>
         </caption>
         <thead>
           <tr>
-            <td>Method</td>
-            <td>How it affects flavour</td>
+            <th>Method</th>
+            <th>How it affects flavour</th>
           </tr>
         </thead>
         <tbody>
@@ -320,66 +329,63 @@
         </tbody>
       </table>
       <h3 id="types">Types of Coffee</h3>
-      <p>
+      <p id="types-p">
         This guide has gone through the true fundamentals of coffee, and how it
-        affects the flavour of your soon to-be coffee. Now just like
-        <abbr title="Hyper Text Markup Language">HTML</abbr>, that was the
-        skeleton structure, now all we need is to apply some
-        <abbr title="Cascading Style Sheets">CSS</abbr>, and design our coffee.
+        affects the flavour of your soon to-be coffee. Now we add design and make our coffee.
         Here are the several different types of coffees we offer, and their
         details.
       </p>
-      <h4>Latte</h4>
+      <h4 id="latte">Latte</h4>
       <p>
         A latte is made with one shot of espresso and steamed milk, topped with
         a small amount of milk foam. It’s smooth, creamy, and perfect for those
         who prefer a milder coffee taste.
       </p>
-      <h4>Cappuccino</h4>
+      <h4 id="cappuccino">Cappuccino</h4>
       <p>
         Cappuccino has equal parts espresso, steamed milk, and milk foam. It’s
         stronger than a latte, with a thick, airy foam layer on top.
       </p>
-      <h4>Americano</h4>
+      <h4 id="americano">Americano</h4>
       <p>
         An Americano is made by adding hot water to a shot of espresso. It has a
         similar strength to drip coffee but with the rich flavor of espresso.
       </p>
-      <h4>Espresso</h4>
+      <h4 id="espresso">Espresso</h4>
       <p>
         A concentrated shot of coffee made by forcing hot water through
         finely-ground beans. It’s strong, bold, and the base for most other
         coffee drinks.
       </p>
-      <h4>Machiatto</h4>
+      <h4 id="machiatto">Machiatto</h4>
       <p>
         This drink means “stained” in Italian. It’s a shot of espresso “stained”
         with a small amount of milk or milk foam — stronger than a latte or
         cappuccino.
       </p>
-      <h4>Flat White</h4>
+      <h4 id="flat-white">Flat White</h4>
       <p>
         Originating from Australia/New Zealand, a flat white is similar to a
         latte but smaller, with a thinner layer of microfoam and a stronger
         espresso taste.
       </p>
-      <h4>Mocha</h4>
+      <h4 id="mocha">Mocha</h4>
       <p>
         A mocha blends espresso, steamed milk, and chocolate syrup or cocoa
         powder — like a hot chocolate with a caffeine kick.
       </p>
-      <h4>Cold Brew</h4>
+      <h4 id="cold-brew">Cold Brew</h4>
       <p>
         Coffee grounds are steeped in cold water for 12 to 24 hours. The result
         is a smooth, slightly sweet coffee with low acidity — perfect served
         over ice.
       </p>
-      <h4>Affogato</h4>
+      <h4 id="affogato">Affogato</h4>
       <p>
         A scoop of vanilla ice cream “drowned” in a hot shot of espresso. It’s
         part dessert, part coffee — and fully delicious.
       </p>
-      <h4>Iced Coffee</h4>
+      <h4 id="iced-coffee">Iced Coffee</h4>
       <p>
         Brewed hot, then cooled and served over ice. Tastes more like
         traditional drip coffee, but refreshing and chilled.
@@ -394,5 +400,7 @@
         deserve, happy drinking everybody!
       </p>
     </footer>
+
+  </div>
   </body>
 </html>

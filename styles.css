@@ -1,0 +1,205 @@
+body {
+    background-image: url(https://png.pngtree.com/thumb_back/fh260/background/20231031/pngtree-coffee-inspired-seamless-wallpaper-pattern-featuring-geometric-shapes-and-a-textured-image_13774201.png);
+
+}
+
+#color-background {
+    text-align: center;
+    width: 80%;
+  background-color: rgb(164, 123, 70);
+  margin: auto;
+  padding: 20px;
+  max-width: 700px;
+    border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+    
+
+
+#title {
+    text-align: center;
+    font-family: "LXGW Marker Gothic";
+}
+
+#description {
+    text-align: center;
+    font-family: DM Sans;
+}
+
+.nav{
+    text-align: center;
+    font-family: LXGW Marker Gothic;
+}
+
+
+.p-nav {
+    display: block
+    padding: 10px;
+    margin: 5px;
+}
+
+.nav a {
+    color: #5c3b1a;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+.nav a:hover {
+    color: #3e2723;
+    text-decoration: underline;
+}
+.nav a:visited {
+    color: #5c3b1a
+    transition: color 0.3s ease;
+}
+
+h2 {
+    padding: 1px;
+    margin: 3px;
+}
+
+#personal-info {
+    font-family: LXGW Marker Gothic;
+}
+
+#choose-coffee {
+    font-family: LXGW Marker Gothic;
+}
+
+#brew-pref {
+    font-family: LXGW Marker Gothic;
+}
+
+#brew-method {
+    font-family: LXGW Marker Gothic;
+}
+
+#special-req {
+    font-family: LXGW Marker Gothic;
+}
+
+#name-label {
+    font-family: DM Sans;
+}
+
+#email-label {
+    font-family: DM Sans;
+}
+
+#number-label {
+    font-family: DM Sans;
+}
+
+#age {
+    font-family: DM Sans;
+}
+
+#strength {
+    font-family: DM Sans;
+}
+
+#extras {
+    font-family: DM Sans;
+}
+
+#extra-request {
+    font-family: DM Sans;
+}
+
+#select-brew-method {
+    font-family: DM Sans;
+}
+
+#note {
+    font-family: DM Sans;
+}
+
+#submit {
+    font-family: DM Sans;
+    font-size: 15px;
+    background-color: rgb(205, 154, 87);
+    border: none;
+    border-radius: 4px;
+      transition-duration: 0.4s;
+  box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2), 0 6px 20px 0 rgba(0,0,0,0.19);
+ transition: all 0.5s;
+}
+
+#submit:hover {
+    background-color: rgb(164, 123, 70);
+    color: white;
+    padding-top: 5px;
+    padding-left: 5px;
+    padding-bottom: 5px;
+    padding-right: 5px;
+}
+
+.box {
+    padding: 30px;
+    width: 735px;
+    max-width: 735px;
+    margin: auto;
+    border: none;
+    border-radius: 8px;
+    background-color: #fdf1e0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+
+
+#coffee-guide {
+    text-align: center;
+    font-family: LXGW Marker Gothic;
+}
+ #coffee-guide-p {
+    text-align: center;
+    font-family: DM Sans;
+ }
+ 
+ #beans {
+    text-align: center;
+    padding-bottom: 15px;
+    font-family: LXGW Marker Gothic;
+}
+
+#brewing {
+    text-align: center;
+    padding-bottom: 15px;
+    font-family: LXGW Marker Gothic;
+}
+
+#brewing-flavor {
+    text-align: center;
+    padding-bottom: 15px;
+    font-family: LXGW Marker Gothic;
+}
+
+#types {
+    text-align: center;
+    padding-bottom: 15px;
+    font-family: LXGW Marker Gothic;
+}
+
+#types-p {
+    text-align: center;
+    font-family: DM Sans;
+}
+
+#latte, #cappuccino, #americano, #espresso, #machiatto, #flat-white, #mocha, #cold-brew, #affogato, #iced-coffee {
+    text-align: center;
+    padding-bottom: 10px;
+    font-family: LXGW Marker Gothic;
+}
+
+p {
+    text-align: center;
+    font-family: DM Sans;
+}
+
+table, th, td {
+    text-align: center;
+    border: 1px solid;
+    border-collapse: collapse;
+}
+
+
